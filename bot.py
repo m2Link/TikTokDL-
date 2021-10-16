@@ -75,7 +75,7 @@ async def _help(bot, update):
 # About
 @xbot.on_message(filters.command('about') & filters.private)
 async def _about(bot, update):
-  await update.reply_text(f"ᴀʙᴏᴜᴛ ᴍᴇ 😎\n\n\n🤖 **ɴᴀᴍᴇ :[ᴍᴇᴅɪᴀ sᴛᴇᴀᴍ](https://telegram.me/TikTokDL_M2Bot)\n\n👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ :** [ᴍ2](https://telegram.me/ask_admin01)\n\n📢 **ᴄʜᴀɴɴᴇʟ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botz)\n\n👥 **ɢʀᴏᴜᴘ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botzsupport)\n\n🌐 **sᴏᴜʀᴄᴇ :** [ʀᴇʟᴇᴀsɪɴɢ sᴏᴏɴ](https://t.me/m2botz)\n\n📝 **ʟᴀɴɢᴜᴀɢᴇ :** [ᴘʏᴛʜᴏɴ3](https://python.org)\n\n🧰 **ꜰʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢʀᴀᴍ](https://pyrogram.org)\n\n📡 **sᴇʀᴠᴇʀ :** [ʜᴇʀᴏᴋᴜ](https://heroku.com)", True, reply_markup=InlineKeyboardMarkup(ABOUT_BUTTONS))
+  await update.reply_text(f"ᴀʙᴏᴜᴛ ᴍᴇ 😎\n\n\n🤖 **ɴᴀᴍᴇ :[ᴛɪᴋᴛᴏᴋ ᴅʟ](https://telegram.me/TikTokDL_M2Bot)\n\n👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ :** [ᴍ2](https://telegram.me/ask_admin01)\n\n📢 **ᴄʜᴀɴɴᴇʟ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botz)\n\n👥 **ɢʀᴏᴜᴘ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botzsupport)\n\n🌐 **sᴏᴜʀᴄᴇ :** [ʀᴇʟᴇᴀsɪɴɢ sᴏᴏɴ](https://t.me/m2botz)\n\n📝 **ʟᴀɴɢᴜᴀɢᴇ :** [ᴘʏᴛʜᴏɴ3](https://python.org)\n\n🧰 **ꜰʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢʀᴀᴍ](https://pyrogram.org)\n\n📡 **sᴇʀᴠᴇʀ :** [ʜᴇʀᴏᴋᴜ](https://heroku.com)", True, reply_markup=InlineKeyboardMarkup(ABOUT_BUTTONS))
 
 
 # Downloader for tiktok
