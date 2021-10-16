@@ -72,9 +72,9 @@ async def _start(bot, update):
 async def _help(bot, update):
   await update.reply_text(f"Hey, Follow these steps:\n\n➠ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛɪᴋᴛᴏᴋ ʟɪɴᴋ\n➠ ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴡᴀᴛᴇʀᴍᴀʀᴋ & ᴡɪᴛʜᴏᴜᴛ ᴡᴀᴛᴇʀᴍᴀʀᴋ ᴀɴᴅ ᴀᴜᴅɪᴏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ\n➠ Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ\n➠ ᴛʜɪs ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜ ꜰᴀsᴛᴇsᴛ sᴘᴇᴇᴅ\n\nᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs\n\n/Start - ᴄʜᴇᴄᴋɪɴɢ ʙᴏᴛ ᴏɴʟɪɴᴇ\n/Help - ꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ\n/About - ꜰᴏʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ\n\nᴍᴀᴅᴇ ʙʏ @M2Botz", True, reply_markup=InlineKeyboardMarkup(HELP_BUTTONS))
 
-# Start
-@xbot.on_message(filters.command('start') & filters.private)
-async def _start(bot, update):
+# About
+@xbot.on_message(filters.command('about') & filters.private)
+async def _about(bot, update):
   await update.reply_text(f"ᴀʙᴏᴜᴛ ᴍᴇ 😎\n\n\n🤖 **ɴᴀᴍᴇ :[ᴍᴇᴅɪᴀ sᴛᴇᴀᴍ](https://telegram.me/TikTokDL_M2Bot\n\n👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ :** [ᴍ2](https://telegram.me/ask_admin01)\n\n📢 **ᴄʜᴀɴɴᴇʟ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botz)\n\n👥 **ɢʀᴏᴜᴘ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botzsupport)\n\n🌐 **sᴏᴜʀᴄᴇ :** [ʀᴇʟᴇᴀsɪɴɢ sᴏᴏɴ](https://t.me/m2botz)\n\n📝 **ʟᴀɴɢᴜᴀɢᴇ :** [ᴘʏᴛʜᴏɴ3](https://python.org)\n\n🧰 **ꜰʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢʀᴀᴍ](https://pyrogram.org)\n\n📡 **sᴇʀᴠᴇʀ :** [ʜᴇʀᴏᴋᴜ](https://heroku.com)", True, reply_markup=InlineKeyboardMarkup(ABOUT_BUTTONS))
 
 
