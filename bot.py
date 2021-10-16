@@ -57,7 +57,7 @@ async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
 # Start
 @xbot.on_message(filters.command('start') & filters.private)
 async def _start(bot, update):
-  await update.reply_text(f"Hi,{}\n\nI am a TikTok Downloader bot.you can download tiktok videos without watermark and audios.", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+  await update.reply_text(f"Hi,\n\nI am a TikTok Downloader bot.you can download tiktok videos without watermark and audios.", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 #Help
 @xbot.on_message(filters.command('help') & filters.private)
