@@ -12,18 +12,26 @@ downloads = './downloads/{}/'
 #Button
 START_BUTTONS=[
     [
-        InlineKeyboardButton('💬Update Channel', url='https://github.com/X-Gorn/TikTokDL'),
-        InlineKeyboardButton('🗣Support Group', url='https://t.me/xTeamBots'),
+        InlineKeyboardButton('💬Update Channel', url='https://t.me/m2botz'),
+        InlineKeyboardButton('🗣Support Group', url='https://t.me/m2botzsupport'),
     ],
-    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/xgorn')],
+    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/ask_admin01')],
 ]
 
 HELP_BUTTONS=[
     [
-        InlineKeyboardButton('💬Update Channel', url='https://github.com/X-Gorn/TikTokDL'),
-        InlineKeyboardButton('🗣Support Group', url='https://t.me/xTeamBots'),
+        InlineKeyboardButton('💬Update Channel', url='https://t.me/m2botz'),
+        InlineKeyboardButton('🗣Support Group', url='https://t.me/m2botzsupport'),
     ],
-    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/xgorn')],
+    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/ask_admin01')],
+]
+
+ABOUT_BUTTONS=[
+    [
+        InlineKeyboardButton('💬Update Channel', url='https://t.me/m2botz'),
+        InlineKeyboardButton('🗣Support Group', url='https://t.me/m2botzsupport'),
+    ],
+    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/ask_admin01')],
 ]
 
 DL_BUTTONS=[
@@ -63,6 +71,28 @@ async def _start(bot, update):
 @xbot.on_message(filters.command('help') & filters.private)
 async def _help(bot, update):
   await update.reply_text(f"Hey, Follow these steps:\n\n➠ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛɪᴋᴛᴏᴋ ʟɪɴᴋ\n➠ ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴡᴀᴛᴇʀᴍᴀʀᴋ & ᴡɪᴛʜᴏᴜᴛ ᴡᴀᴛᴇʀᴍᴀʀᴋ ᴀɴᴅ ᴀᴜᴅɪᴏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ\n➠ Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ\n➠ ᴛʜɪs ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜ ꜰᴀsᴛᴇsᴛ sᴘᴇᴇᴅ\n\nᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs\n\n/Start - ᴄʜᴇᴄᴋɪɴɢ ʙᴏᴛ ᴏɴʟɪɴᴇ\n/Help - ꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ\n/About - ꜰᴏʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ\n\nᴍᴀᴅᴇ ʙʏ @M2Botz", True, reply_markup=InlineKeyboardMarkup(HELP_BUTTONS))
+
+# Start
+@xbot.on_message(filters.command('start') & filters.private)
+async def _start(bot, update):
+  await update.reply_text(f"ᴀʙᴏᴜᴛ ᴍᴇ**-- 😎
+
+🤖 **ɴᴀᴍᴇ :[ᴍᴇᴅɪᴀ sᴛᴇᴀᴍ](https://telegram.me/{})
+
+👨‍💻 **ᴅᴇᴠᴇʟᴏᴘᴇʀ :** [ᴍ2](https://telegram.me/ask_admin01)
+
+📢 **ᴄʜᴀɴɴᴇʟ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botz)
+
+👥 **ɢʀᴏᴜᴘ :** [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/m2botzsupport)
+
+🌐 **sᴏᴜʀᴄᴇ :** [ʀᴇʟᴇᴀsɪɴɢ sᴏᴏɴ](https://t.me/m2botz)
+
+📝 **ʟᴀɴɢᴜᴀɢᴇ :** [ᴘʏᴛʜᴏɴ3](https://python.org)
+
+🧰 **ꜰʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢʀᴀᴍ](https://pyrogram.org)
+
+📡 **sᴇʀᴠᴇʀ :** [ʜᴇʀᴏᴋᴜ](https://heroku.com)""".", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+
 
 # Downloader for tiktok
 @xbot.on_message(filters.regex(pattern='.*http.*') & filters.private)
