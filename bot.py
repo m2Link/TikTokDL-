@@ -12,10 +12,10 @@ downloads = './downloads/{}/'
 #Button
 START_BUTTONS=[
     [
-        InlineKeyboardButton('Source', url='https://github.com/X-Gorn/TikTokDL'),
-        InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
+        InlineKeyboardButton('💬Update Channel', url='https://github.com/X-Gorn/TikTokDL'),
+        InlineKeyboardButton('🗣Support Group', url='https://t.me/xTeamBots'),
     ],
-    [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
+    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/xgorn')],
 ]
 
 DL_BUTTONS=[
@@ -49,7 +49,12 @@ async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
 # Start
 @xbot.on_message(filters.command('start') & filters.private)
 async def _start(bot, update):
-  await update.reply_text(f"I'm TikTokDL!\nYou can download tiktok video/audio using this bot", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+  await update.reply_text(f"Hi,{}\n\nI am a TikTok Downloader bot.you can download tiktok videos without watermark and audios.", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+
+#Help
+@xbot.on_message(filters.command('help') & filters.private)
+async def _help(bot, update):
+  await update.reply_text(f"Hey, Follow these steps:\n\n➠ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛɪᴋᴛᴏᴋ ʟɪɴᴋ\n➠ ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴡᴀᴛᴇʀᴍᴀʀᴋ & ᴡɪᴛʜᴏᴜᴛ ᴡᴀᴛᴇʀᴍᴀʀᴋ ᴀɴᴅ ᴀᴜᴅɪᴏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ\n➠ Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ\n➠ ᴛʜɪs ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜ ꜰᴀsᴛᴇsᴛ sᴘᴇᴇᴅ\n\nᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs\n\n/Start - ᴄʜᴇᴄᴋɪɴɢ ʙᴏᴛ ᴏɴʟɪɴᴇ\n/Help - ꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ\n/About - ꜰᴏʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ\n\nᴍᴀᴅᴇ ʙʏ @M2Botz", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 # Downloader for tiktok
 @xbot.on_message(filters.regex(pattern='.*http.*') & filters.private)
