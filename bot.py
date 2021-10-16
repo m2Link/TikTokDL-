@@ -18,6 +18,14 @@ START_BUTTONS=[
     [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/xgorn')],
 ]
 
+HELP_BUTTONS=[
+    [
+        InlineKeyboardButton('💬Update Channel', url='https://github.com/X-Gorn/TikTokDL'),
+        InlineKeyboardButton('🗣Support Group', url='https://t.me/xTeamBots'),
+    ],
+    [InlineKeyboardButton('🧑‍💻 Developer', url='https://t.me/xgorn')],
+]
+
 DL_BUTTONS=[
     [
         InlineKeyboardButton('No Watermark', callback_data='nowm'),
@@ -54,7 +62,7 @@ async def _start(bot, update):
 #Help
 @xbot.on_message(filters.command('help') & filters.private)
 async def _help(bot, update):
-  await update.reply_text(f"Hey, Follow these steps:\n\n➠ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛɪᴋᴛᴏᴋ ʟɪɴᴋ\n➠ ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴡᴀᴛᴇʀᴍᴀʀᴋ & ᴡɪᴛʜᴏᴜᴛ ᴡᴀᴛᴇʀᴍᴀʀᴋ ᴀɴᴅ ᴀᴜᴅɪᴏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ\n➠ Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ\n➠ ᴛʜɪs ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜ ꜰᴀsᴛᴇsᴛ sᴘᴇᴇᴅ\n\nᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs\n\n/Start - ᴄʜᴇᴄᴋɪɴɢ ʙᴏᴛ ᴏɴʟɪɴᴇ\n/Help - ꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ\n/About - ꜰᴏʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ\n\nᴍᴀᴅᴇ ʙʏ @M2Botz", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+  await update.reply_text(f"Hey, Follow these steps:\n\n➠ sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛɪᴋᴛᴏᴋ ʟɪɴᴋ\n➠ ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴡᴀᴛᴇʀᴍᴀʀᴋ & ᴡɪᴛʜᴏᴜᴛ ᴡᴀᴛᴇʀᴍᴀʀᴋ ᴀɴᴅ ᴀᴜᴅɪᴏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ\n➠ Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ\n➠ ᴛʜɪs ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜ ꜰᴀsᴛᴇsᴛ sᴘᴇᴇᴅ\n\nᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs\n\n/Start - ᴄʜᴇᴄᴋɪɴɢ ʙᴏᴛ ᴏɴʟɪɴᴇ\n/Help - ꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ\n/About - ꜰᴏʀ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ\n\nᴍᴀᴅᴇ ʙʏ @M2Botz", True, reply_markup=InlineKeyboardMarkup(HELP_BUTTONS))
 
 # Downloader for tiktok
 @xbot.on_message(filters.regex(pattern='.*http.*') & filters.private)
